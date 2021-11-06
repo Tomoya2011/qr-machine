@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>QRCodeかんたん作成 by Tomoya108</title>
+</head>
+<body>
+<h1>QRCodeかんたん作成</h1>
+<h3>by Tomoya108</h2>
+<input type="button" value="QRCodeを作成する" onclick="qrcode();">
+<script type="text/javascript">
+function qrcode(){    
+// ▼ユーザの入力を求める    
+var UserInput = prompt("QRCodeに埋め込む文字列/URLを入力してください。","");
+// ▼キャンセルをチェック    
+if( UserInput != null ) {
+alert("QRCode「" + UserInput + "」を生成しました。移動先のページでQRCodeを長押しして保存してください。");       
+// ▼入力内容からファイル名を生成して移動       
+window.open("https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=" + UserInput + "&choe=UTF-8");    } } 
+</script>
+</body>
+</html>
